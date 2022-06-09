@@ -57,8 +57,8 @@ router.put('/update', (request, response, next) => {
 
     //UPDATE TASK
     // USUALLY VALIDATE, PUT, COMFIRM
-    if (task.status) task.completed = request.body.status;
-    if (task.lengthOfTask) task.lengthOfTask = request.body.lengthOfTask;
+    if (request.task.status) task.completed = request.body.status;
+    if (request.task.lengthOfTask) task.lengthOfTask = request.body.lengthOfTask;
     response.status(200).json(task);
     
 });
